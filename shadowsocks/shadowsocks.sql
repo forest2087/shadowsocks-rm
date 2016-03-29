@@ -13,12 +13,14 @@ CREATE TABLE `user` (
   `switch` tinyint(4) NOT NULL DEFAULT '1',
   `enable` tinyint(4) NOT NULL DEFAULT '1',
   `type` tinyint(4) NOT NULL DEFAULT '1',
-  `last_get_gift_time` int(11) NOT NULL DEFAULT '0',
-  `last_rest_pass_time` int(11) NOT NULL DEFAULT '0',
+  `last_usage_time` timestamp NOT NULL DEFAULT '0',
+  `last_rest_pass_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`,`port`)
 ) ENGINE=InnoDB AUTO_INCREMENT=415 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('0', 'test@test.com', '123456', '0000000', '1410609560', '0', '0', '9320666234', '50000', '1', '1', '7', '0', '0');
+INSERT INTO `user` VALUES ('0', 'test@test.com', '123456', '0000000', '1410609560', '0', '0', '9320666234', '50000', '1', '1', '7');
