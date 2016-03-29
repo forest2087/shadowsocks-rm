@@ -81,7 +81,6 @@ class DbTransfer(object):
         conn = cymysql.connect(host=config.MYSQL_HOST, port=config.MYSQL_PORT, user=config.MYSQL_USER,
                                passwd=config.MYSQL_PASS, db=config.MYSQL_DB, charset='utf8')
         cur = conn.cursor()
-        logging.debug(query_sql)
         cur.execute(query_sql)
         cur.close()
         conn.commit()
