@@ -32,6 +32,8 @@ class DbTransfer(object):
             cli.sendto(cmd, ('%s' % (config.MANAGE_BIND_IP), config.MANAGE_PORT))
             data, addr = cli.recvfrom(1500)
             cli.close()
+            # TODO: bad way solve timed out
+            time.sleep(0.05)
         except:
             logging.warn('send_command response')
         return data
@@ -126,7 +128,7 @@ class DbTransfer(object):
         timeout = 30
         socket.setdefaulttimeout(timeout)
         while True:
-            logging.warn('db loop')
+            #logging.warn('db loop')
             try:
                 DbTransfer.get_instance().push_db_all_user()
                 rows = DbTransfer.get_instance().pull_db_all_user()
