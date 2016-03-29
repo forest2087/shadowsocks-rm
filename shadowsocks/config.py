@@ -1,3 +1,5 @@
+import logging
+
 #Config
 MYSQL_HOST = 'mengsky.net'
 MYSQL_PORT = 3306
@@ -17,6 +19,8 @@ MANAGE_PORT = 23333
 SS_BIND_IP = '0.0.0.0'
 SS_METHOD = 'rc4-md5'
 
-#specify the log file location
-log_file = '/var/log/shadowsocks.log';
+#LOG CONFIG
+LOG_ENABLE = False
+LOG_LEVEL = logging.DEBUG
+LOG_FILE = '/var/log/shadowsocks.log'
 
