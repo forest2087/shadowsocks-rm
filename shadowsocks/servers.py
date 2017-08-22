@@ -23,6 +23,8 @@ import config
 import signal
 import time
 
+logging.basicConfig(filename='/var/log/shadowsocks.log',level=logging.DEBUG)
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../'))
 from shadowsocks import shell, daemon, eventloop, tcprelay, udprelay, \
     asyncdns, manager
