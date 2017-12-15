@@ -13,7 +13,7 @@ MANAGE_BIND_IP = '127.0.0.1'
 #make sure this port is idle
 MANAGE_PORT = 23333
 
-PANEL_VERSION = 'V3' # V2 or V3. V2 not support API
+PANEL_VERSION = 'V2' # V2 or V3. V2 not support API
 API_URL = 'http://domain/mu'
 API_PASS = 'mupass'
 NODE_ID = '1'
@@ -29,6 +29,5 @@ SS_METHOD = 'rc4-md5'
 
 #LOG CONFIG
 LOG_ENABLE = False
-LOG_LEVEL = logging.INFO
+LOG_LEVEL = logging.DEBUG
 LOG_FILE = '/var/log/shadowsocks.log'
-
